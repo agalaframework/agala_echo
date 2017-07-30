@@ -17,7 +17,8 @@ defmodule AgalaEcho.Mixfile do
 
   defp deps do
     [
-      {:agala, github: "virviil/agala", branch: "develop"}
+      {:agala, github: "agalaframework/agala", branch: "develop"},
+      {:agala_telegram, github: "agalaframework/agala_telegram", branch: "master"}
     ]
   end
 end
