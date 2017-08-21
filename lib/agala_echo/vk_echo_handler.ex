@@ -9,17 +9,18 @@ defmodule AgalaEcho.VkEchoHandler do
   use Agala.Chain.Builder
   use Agala.Provider.Vk, :handler
 
+  chain Agala.Chain.Loopback
+  chain Agala.Provider.Vk.Chain.Parser
   chain :handle
 
   def handle(conn = %Agala.Conn{
     request_bot_params: %Agala.BotParams{name: name},
-    request: request = [4, flags, _, user_id, _, _, text, _, random_id]
+    request: request = %{user_id: user_id, text: text, random_id: random_id}
   }, _) do
-    IO.inspect request
     case random_id do
       0 ->
         conn
-        |> send_message(name, user_id, text)
+        |> Messages.send(user_id, text)
       _ -> conn |> Agala.Conn.halt()
     end
   end
