@@ -1,5 +1,6 @@
-%{"agala": {:git, "https://github.com/agalaframework/agala.git", "cd6be573d169aff132df12b862dd17094e28497d", [branch: "release/2.0.0"]},
-  "agala_telegram": {:git, "https://github.com/agalaframework/agala_telegram.git", "eb8859c523f08fff1b38c08e00a1c0821181a863", [branch: "master"]},
+%{"agala": {:hex, :agala, "2.0.1", "7a74c0b8df24e52101a333501b9381bcd2da28ff4edc93e5a6c5c5ba458e4192", [], [{:excoveralls, "~> 0.7.4", [hex: :excoveralls, repo: "hexpm", optional: false]}], "hexpm"},
+  "agala_telegram": {:hex, :agala_telegram, "0.1.0", "0267fbe8fecf29cad73edd9c2a2634c1c848c8a82e06e8ef93a821ec32dec914", [], [{:agala, "~> 2.0.1", [hex: :agala, repo: "hexpm", optional: false]}, {:httpoison, "~> 0.12", [hex: :httpoison, repo: "hexpm", optional: false]}, {:poison, "~> 3.1", [hex: :poison, repo: "hexpm", optional: false]}], "hexpm"},
+  "agala_vk": {:hex, :agala_vk, "0.1.0", "24cadb6017bfc2c17c2d9f5088c941b213cb99e9586dd1de6e925198c8baff00", [], [{:agala, "~> 2.0.1", [hex: :agala, repo: "hexpm", optional: false]}, {:httpoison, "~> 0.12", [hex: :httpoison, repo: "hexpm", optional: false]}, {:poison, ">= 1.5.0", [hex: :poison, repo: "hexpm", optional: false]}], "hexpm"},
   "certifi": {:hex, :certifi, "2.0.0", "a0c0e475107135f76b8c1d5bc7efb33cd3815cb3cf3dea7aefdd174dabead064", [], [], "hexpm"},
   "excoveralls": {:hex, :excoveralls, "0.7.5", "339e433e5d3bce09400dc8de7b9040741a409c93917849916c136a0f51fdc183", [], [{:exjsx, ">= 3.0.0", [hex: :exjsx, repo: "hexpm", optional: false]}, {:hackney, ">= 0.12.0", [hex: :hackney, repo: "hexpm", optional: false]}], "hexpm"},
   "exjsx": {:hex, :exjsx, "4.0.0", "60548841e0212df401e38e63c0078ec57b33e7ea49b032c796ccad8cde794b5c", [], [{:jsx, "~> 2.8.0", [hex: :jsx, repo: "hexpm", optional: false]}], "hexpm"},

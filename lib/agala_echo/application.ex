@@ -7,7 +7,7 @@ defmodule AgalaEcho.Application do
     # Add here as many bot instances as you want. Dont forget to name there uniqly.
     children = [
       supervisor(Agala.Bot, [telegram_bot_configuration()], id: :telegram),
-      # supervisor(Agala.Bot, [vk_bot_configuration()], id: :vk)
+      supervisor(Agala.Bot, [vk_bot_configuration()], id: :vk)
     ]
 
     opts = [strategy: :one_for_one, name: AgalaEcho.Supervisor]
@@ -26,15 +26,15 @@ defmodule AgalaEcho.Application do
     }
   end
 
-  # def vk_bot_configuration do
-  #   %Agala.BotParams{
-  #     name: "agala_echo_vk",
-  #     provider: Agala.Provider.Vk,
-  #     handler: AgalaEcho.VkEchoHandler,
-  #     provider_params: %Agala.Provider.Vk.Conn.ProviderParams{
-  #       token: System.get_env("VK_TOKEN"),
-  #       poll_timeout: :infinity
-  #     }
-  #   }
-  # end
+  def vk_bot_configuration do
+    %Agala.BotParams{
+      name: "agala_echo_vk",
+      provider: Agala.Provider.Vk,
+      handler: AgalaEcho.VkEchoHandler,
+      provider_params: %Agala.Provider.Vk.Conn.ProviderParams{
+        token: System.get_env("VK_TOKEN"),
+        poll_timeout: :infinity
+      }
+    }
+  end
 end
