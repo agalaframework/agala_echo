@@ -11,14 +11,15 @@ defmodule AgalaEcho.Mixfile do
   end
 
   def application do
-    [extra_applications: [:logger, :agala_vk, :agala_telegram],
+    [extra_applications: [:logger, :agala_vk, :agala_telegram, :agala_email],
      mod: {AgalaEcho.Application, []}]
   end
 
   defp deps do
     [
       {:agala_telegram, "~> 0.1.0"},
-      {:agala_vk, "~> 0.1.0"}
+      {:agala_vk, "~> 0.1.0"},
+      {:agala_email, path: "../agala_email"}
     ]
   end
 end
